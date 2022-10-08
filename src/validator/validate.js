@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+
 let isEmptyVar = function (value) {
     if(typeof value === "undefined" || typeof value === "null") return true;
     if(typeof value === "string" && value.trim().length == 0) return true;
@@ -51,10 +52,6 @@ const acceptFileType = (file, ...types) => {
 const isValidSize = (sizes) => {
     return ["S", "XS","M","X", "L","XXL", "XL"].includes(sizes);
   }
-
-
-
-
 
 module.exports = {
     isEmptyVar,isREgexName,isValidString,isValidPrice,isValidEmail,isValidPhone,isValidPassword,

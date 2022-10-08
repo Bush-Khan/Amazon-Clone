@@ -6,7 +6,6 @@ const cart = require("../controllers/cartController")
 const orderController = require("../controllers/orderController")
 const middleWare = require("../middleWare/auth")
 
-
 //User Api
 router.post("/register", userController.createUser);
 router.post("/login", userController.login);

@@ -3,7 +3,7 @@ const cartModel = require('../models/cartModel')
 const validate = require('../validator/validate.js')
 const userModel = require('../models/userModel')
 
-
+//-----------------------------------Create Order API----------------------------------------
 const createOrder = async function (req, res) {
 
     try {
@@ -41,8 +41,7 @@ const createOrder = async function (req, res) {
     } catch (error) { res.status(500).send({ status: false, Message: error.message }) }
 }
 
-
-
+//---------------------------------------------Update Order API---------------------------------
 const updateOrder = async function (req, res) {
     const userId = req.params.userId
     const requestBody = req.body

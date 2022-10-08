@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken")
 
 const { isEmptyVar, isREgexName, isValidEmail, isValidPhone, isValidPassword, isValidObjectId, isPincodeValid, isEmptyFile } = require("../validator/validate")
 
+//--------------------------------------Create User API-------------------------------------
 const createUser = async function (req, res) {
     try {
         const requestBody = req.body
@@ -79,9 +80,7 @@ const createUser = async function (req, res) {
     }
 }
 
-
-
-
+//--------------------------Login API-----------------------------------------
 const login = async (req, res) => {
     try {
         const data = req.body
@@ -123,6 +122,7 @@ const login = async (req, res) => {
     }
 }
 
+//------------------------------Get User-----------------------------------------
 const getUser = async function (req, res) {
     try {
 
@@ -146,8 +146,7 @@ const getUser = async function (req, res) {
     }
 };
 
-
-
+//-------------------------------------Update User API----------------------------------
 const updateUser = async (req, res) => {
     try {
         const data = req.body

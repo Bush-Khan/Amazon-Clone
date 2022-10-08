@@ -1,6 +1,7 @@
 let jwt = require("jsonwebtoken")
 const {isEmptyVar}=require("../validator/validate")
 
+
 /****************************************(Authentication)*****************************************************/
 const authentication = (req, res, next) => {
     try{

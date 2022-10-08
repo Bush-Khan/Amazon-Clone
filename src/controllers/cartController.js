@@ -159,7 +159,6 @@ const updateCart = async function (req, res) {
 
         let updated = await cartModel.findOneAndUpdate({ _id: cartId }, { items: pro, totalPrice: cTotalPrice, totalItems: cTotalItems }, { new: true })
 
-
         return res.status(200).send({ status: true, message: "Update successfull", data: updated })
     }
 

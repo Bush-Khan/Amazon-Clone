@@ -2,6 +2,7 @@ const productModel = require("../models/productModel");
 const AwsService = require("../aws/AwsService");
 const validate = require("../validator/validate");
 
+//--------------------------Add Product API------------------------------------
 const addProduct = async (req, res) => {
   try {
     let data = req.body;
@@ -91,6 +92,7 @@ const addProduct = async (req, res) => {
   }
 }
 
+//---------------------------------Get Product API--------------------------------
 const getProudcts = async (req, res) => {
   try {
     const data = req.query;
@@ -154,6 +156,7 @@ const getProudcts = async (req, res) => {
   }
 }
 
+//----------------------------------------Get Product By ID API------------------------------------
 const getProudctsById = async (req, res) => {
   try {
     let filter = req.params.productId
@@ -173,6 +176,7 @@ const getProudctsById = async (req, res) => {
   }
 };
 
+//----------------------------------------Update Product By ID API-----------------------------------
 const updateProductById = async function (req, res) {
   try {
     const requestBody = req.body
@@ -238,6 +242,7 @@ const updateProductById = async function (req, res) {
 
 }
 
+//---------------------------Delete Product API-----------------------------------------------
 const deleteProduct = async (req, res) => {
   try {
     // get params product id
